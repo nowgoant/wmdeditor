@@ -24,12 +24,71 @@
       <DependentUpon>wmd-bar.less</DependentUpon>
     </Content>
     <Content Include="content\css\wmd-bar.less" />
+    <Content Include="content\fonts\opensans-bold-webfont.eot" />
+    <Content Include="content\fonts\opensans-bold-webfont.ttf" />
+    <Content Include="content\fonts\opensans-bold-webfont.woff" />
+    <Content Include="content\fonts\opensans-bolditalic-webfont.eot" />
+    <Content Include="content\fonts\opensans-bolditalic-webfont.ttf" />
+    <Content Include="content\fonts\opensans-bolditalic-webfont.woff" />
+    <Content Include="content\fonts\opensans-extrabold-webfont.eot" />
+    <Content Include="content\fonts\opensans-extrabold-webfont.ttf" />
+    <Content Include="content\fonts\opensans-extrabold-webfont.woff" />
+    <Content Include="content\fonts\opensans-italic-webfont.eot" />
+    <Content Include="content\fonts\opensans-italic-webfont.ttf" />
+    <Content Include="content\fonts\opensans-italic-webfont.woff" />
+    <Content Include="content\fonts\opensans-regular-webfont.eot" />
+    <Content Include="content\fonts\opensans-regular-webfont.ttf" />
+    <Content Include="content\fonts\opensans-regular-webfont.woff" />
     <None Include="lib\jquery-2.1.1.intellisense.js" />
     <Content Include="content\css\wmd-editor.css">
       <DependentUpon>wmd-editor.less</DependentUpon>
     </Content>
+    <Content Include="content\fonts\opensans-bold-webfont.svg" />
+    <Content Include="content\fonts\opensans-bolditalic-webfont.svg" />
+    <Content Include="content\fonts\opensans-extrabold-webfont.svg" />
+    <Content Include="content\fonts\opensans-italic-webfont.svg" />
+    <Content Include="content\fonts\opensans-regular-webfont.svg" />
+    <Content Include="content\images\bg-ramp.jpg" />
+    <Content Include="content\images\blockquote-gfx-2x.png" />
+    <Content Include="content\images\blockquote-gfx.png" />
+    <Content Include="content\images\body-bg.jpg" />
+    <Content Include="content\images\chevron-2x.png" />
+    <Content Include="content\images\chevron.png" />
+    <Content Include="content\images\download-button.png" />
+    <Content Include="content\images\download-fallback-bg.png" />
+    <Content Include="content\images\download-sprite.png" />
+    <Content Include="content\images\footer-ramp.jpg" />
+    <Content Include="content\images\fork-sprite.png" />
+    <Content Include="content\images\github-button.png" />
+    <Content Include="content\images\header-bg.jpg" />
+    <Content Include="content\images\highlight-bg.jpg" />
+    <Content Include="content\images\hr-2x.jpg" />
+    <Content Include="content\images\hr.jpg" />
+    <Content Include="content\images\octocat-2x.png" />
+    <Content Include="content\images\octocat.png" />
+    <Content Include="content\images\ribbon-tail-sprite-2x.png" />
+    <Content Include="content\images\ribbon-tail-sprite.png" />
+    <Content Include="content\images\shield-fallback.png" />
+    <Content Include="content\images\shield.png" />
+    <Content Include="content\images\sidebar-bg.jpg" />
+    <Content Include="content\images\site-2.png" />
+    <Content Include="content\images\small-ribbon-tail-sprite-2x.png" />
+    <Content Include="content\images\small-ribbon-tail-sprite.png" />
+    <Content Include="content\javascripts\headsmart.min.js" />
+    <Content Include="content\javascripts\main.js" />
+    <Content Include="content\javascripts\modernizr.js" />
+    <Content Include="fis-conf-no-std.js" />
+    <Content Include="fis-conf-timestamp.js" />
+    <Content Include="fis-conf.js" />
     <Content Include="lib\jquery-2.1.1.js" />
     <Content Include="lib\jquery-2.1.1.min.js" />
+    <Content Include="content\css\core.css" />
+    <Content Include="content\css\mobile.css" />
+    <Content Include="content\css\non-screen.css" />
+    <Content Include="content\css\print.css" />
+    <Content Include="content\css\pygment_trac.css" />
+    <Content Include="content\css\screen.css" />
+    <Content Include="content\css\stylesheet.css" />
     <Content Include="test\test.html" />
     <Content Include="views\wmd-button-bar.html" />
     <Content Include="views\wmd-editor.html" />
@@ -1695,6 +1754,8 @@
     <Content Include="content\css\font-face.less" />
     <Content Include="content\css\wmd-editor.less" />
     <Content Include="lib\jquery-2.1.1.min.map" />
+    <Content Include="params.json" />
+    <Content Include="README.md" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
