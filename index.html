@@ -69,7 +69,7 @@
                 aceEditor: null,
                 mdEditor: null,
                 init: function (options) {
-                    var text = document.getElementById('wmd-input').innerHTML,
+                    var wmd = $('#wmd-input'), text = wmd.html(),
                         mdConverter = $md.getSanitizingConverter(),
                         mdE, aceE;
 
@@ -88,6 +88,11 @@
                     aceE.setAutoScrollEditorIntoView(true);
                     aceE.getSession().setUseWrapMode(true);
                     aceE.setValue(text, -1);
+                   
+                    wmd.css({
+                        fontSize: '0.9em',
+                        lineHeight: '24px'
+                    });
                     //search
                     //Markdown.Extra
                     // var e = new Markdown.Editor(t), n = $("#note_content").val(), i = ace.edit("wmd-input");
