@@ -399,28 +399,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="test\ace-builds\.git\config" />
-    <Content Include="test\ace-builds\.git\description" />
-    <Content Include="test\ace-builds\.git\HEAD" />
-    <Content Include="test\ace-builds\.git\hooks\applypatch-msg.sample" />
-    <Content Include="test\ace-builds\.git\hooks\commit-msg.sample" />
-    <Content Include="test\ace-builds\.git\hooks\post-update.sample" />
-    <Content Include="test\ace-builds\.git\hooks\pre-applypatch.sample" />
-    <Content Include="test\ace-builds\.git\hooks\pre-commit.sample" />
-    <Content Include="test\ace-builds\.git\hooks\pre-push.sample" />
-    <Content Include="test\ace-builds\.git\hooks\pre-rebase.sample" />
-    <Content Include="test\ace-builds\.git\hooks\prepare-commit-msg.sample" />
-    <Content Include="test\ace-builds\.git\hooks\update.sample" />
-    <Content Include="test\ace-builds\.git\index" />
-    <Content Include="test\ace-builds\.git\info\exclude" />
-    <Content Include="test\ace-builds\.git\logs\HEAD" />
-    <Content Include="test\ace-builds\.git\logs\refs\heads\master" />
-    <Content Include="test\ace-builds\.git\logs\refs\remotes\origin\HEAD" />
-    <Content Include="test\ace-builds\.git\objects\pack\pack-4fe6fa6f67a5fbf58a99f21a1fc917488373b0a4.idx" />
-    <Content Include="test\ace-builds\.git\objects\pack\pack-4fe6fa6f67a5fbf58a99f21a1fc917488373b0a4.pack" />
-    <Content Include="test\ace-builds\.git\packed-refs" />
-    <Content Include="test\ace-builds\.git\refs\heads\master" />
-    <Content Include="test\ace-builds\.git\refs\remotes\origin\HEAD" />
     <Content Include="content\css\font-face.less" />
     <Content Include="content\css\wmd-editor.less" />
     <Content Include="lib\jquery-2.1.1.min.map" />
@@ -433,10 +411,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="test\ace-builds\.git\objects\info\" />
-    <Folder Include="test\ace-builds\.git\refs\tags\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\typings\ace\ace.d.ts" />
   </ItemGroup>
