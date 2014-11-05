@@ -89,6 +89,8 @@
     <Content Include="content\css\pygment_trac.css" />
     <Content Include="content\css\screen.css" />
     <Content Include="content\css\stylesheet.css" />
+    <Content Include="lib\jquery.easing.1.3.js" />
+    <Content Include="lib\underscore.js" />
     <Content Include="test\test.html" />
     <Content Include="views\wmd-button-bar.html" />
     <Content Include="views\wmd-editor.html" />
