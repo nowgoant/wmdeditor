@@ -23,10 +23,10 @@
     <div id="content-wrapper">
         <div class="col-2 fl">
             <div class="wmd-area">
+                <input id="text_content" name="content" type="hidden">
                 <div class="wmd-button-bar" id="wmd-button-bar">
                 </div>
                 <div id="wmd-input" class="wmd-input ace-content">
-                  
                 </div>
             </div>
         </div>
@@ -39,6 +39,7 @@
     <script src="lib/Markdown.Converter.js"></script>
     <script src="lib/Markdown.Sanitizer.js"></script>
     <script src="lib/Markdown.Editor.js"></script>
+    <script src="lib/Markdown.Extra.js"></script>
     <script src="lib/ace/ace.js"></script>
     <script src="lib/underscore.js"></script>
     <script src="lib/jquery-2.1.1.js"></script>
@@ -59,10 +60,11 @@
                         mdConverter = $md.getSanitizingConverter(),
                         mdE, aceE;
 
-                    mdConverter.hooks.chain("preBlockGamut", function (text, rbg) {
-                        return text.replace(/^ {0,3}""" *\n((?:.*?\n)+?) {0,3}""" *$/gm, function (whole, inner) {
-                            return "<blockquote>" + rbg(inner) + "</blockquote>\n";
-                        });
+                    Markdown.Extra.init(mdConverter, { highlighter: "prettify" });
+                    mdConverter.hooks.chain("preBlockGamut", function (t, e) {
+                        return t.replace(/^ {0,3}""" *\n((?:.*?\n)+?) {0,3}""" *$/gm, function (t, n) {
+                            return "<blockquote>" + e(n) + "</blockquote>\n"
+                        })
                     });
 
                     this.mdEditor = mdE = new $md.Editor(mdConverter);
@@ -74,6 +76,7 @@
                     aceE.setAutoScrollEditorIntoView(true);
                     aceE.getSession().setUseWrapMode(true);
                     aceE.setOption("scrollPastEnd", true);
+                    aceE.setDisplayIndentGuides(false);
                     aceE.setValue(text, -1);
 
                     this.wmd = wmd.css({
@@ -129,7 +132,6 @@
             resize()
         })(ceditor, window._, jQuery);
 
-
         (function (ceditor, _, $) {
             var $previewElt = $(".preview-container"),
                 isPreviewMoving = false,
@@ -183,7 +185,7 @@
                         easing: "easeOutSine", duration: 200, queue: "scrollLinkFx", step: function (t) {
                             isPreviewMoving = true;
                             lastPreviewScrollTop = i + t;
-                          
+
                             $previewElt.scrollTop(lastPreviewScrollTop);
                         }, done: function () {
                             _.defer(function () {
@@ -233,7 +235,6 @@
 
             window.lightMode ? ceditor.wmd.scroll(onScroll) : ceditor.aceEditor.session.on("changeScrollTop", onScroll)
         })(ceditor, window._, jQuery);
-
 
     </script>
 </body>
