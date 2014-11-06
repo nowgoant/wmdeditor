@@ -2,11 +2,17 @@ Pagedown-Ace+Ace自定义Markdown编辑器
 ========
 #依赖
 1.[Ace.js][1]
+
 2.[Pagedown][2]
+
 3.[Pagedown-Ace][3]
+
 4.[Pagedown-extra][4]
+
 5.[Jquery][5]
+
 6.[Jquery.easing][6]
+
 7.[Underscore][7]
 
 
