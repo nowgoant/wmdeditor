@@ -1,0 +1,140 @@
+﻿#我的技术经历
+##2013.09-至今：外包于微软中国研究院Bing 123导航项目组;
+###**团队角色:**
+   前端开发
+###**技术:**
+   [C#][1],[MVVC][2](MVC),[Spark View Engine][3],HTML5+CSS3/css([LESS link description here][4])+JS（[TypeScript][5])+Region（用户信息收集）;RMS(Resource Management System)微软自家资源管理系统，与百度开源[F.I.S - 前端工具框架][6]类似,功能包括：资源压缩，添加MD5戳，文件合并，资源文件依赖等等
+###**开发流程:**
+   功能正常运行（window server 2012的虚机，vs2012/2013）->code review(代码审核）->代码check in;
+###**典型问题:**
+  **整体开发环境：**整个系统内没有使用第三方基础库（例:[jquery][7]，[angularJs][8]),只对部分公共工具方法有封装，比如：id取元素，cookie读取，简单动画（仅仅支持单一属性改变）等等；理由：引入第三方库，代码冗余,文件大小也会影响页面加载速度和流量
+   **问题一：没有基础库，页面DOM操作困难，要做个轻量级库，原则：只取必须的**
+    判断某个function是否基础级，确定后，融合平台已有api,再从[google][9]，[jquery][10]，[阿里KISSY][11],[腾讯JX][12],[百度QWrap][13]中抽取，大多数来源jquery,感觉其他三个库也是基于jquery优化，添砖加瓦，更适合国内应用场景
+    **比如：***变量基础操作，DOM简单操作，类型扩展，浏览器判断（设首页，css hack（优先使用特性检查),),绑定事件语法糖，时间格式化，JSON（parse,stringify）和Placeholder的兼容,ajax简易api等等*；
+    **体会：**要有耐心去分析库部分源码；*（不否认这些问题都可以google，baidu到，但不一定是最佳方案）*为了保证代码稳定，好维护，涨见识，毕竟这些库都只大牛写的；站在巨人的肩上，还是很好选择。
+
+
+----------
+**问题二：图片lazyLoad和图片左右滚动组件**
+   图片lazyload:借鉴于[阿里KISSYlazyload][14]，[jquery.lazyload.js][15]；实现鼠标滚动后加载图片；主要思路：监听window的scroll事件，然后计算DOM元素是否与window重合（为了效果好一些可以加偏移量值），重合后就加载图片
+   图片左右滚动组件：第一版来源google,第二版借鉴了github上的[Swipe][16],也为的moblie版（android,ios）的touch操作打下基础；也是实现核心功能；
+   **体会：***触碰到开发者逻辑，一步一步还原实践；时刻考虑兼容性。*
+
+----------
+**问题三：js自动定义简单图片上传控件**
+  用于[七夕表白季][17]上传图片，由于图片活动结束，上传功能关闭了：效果图：
+  ![效果图][18]
+   刚接到任务，疯了，没有技术积累，一个星期半做完（开发，测试）整个系统，而且我们上线需要走流程，发布只能专业同事权限，定时发布，吐槽完毕。
+   和同事沟通，功能：
+   1.上传图片后，读取图片到预览（原始大小）
+   2.支持图片旋转，缩小，放大，旋转，可拖动定位
+   3.点击发布后，计算top,left,width,height,rotate发回server截图
+   参考案例：人人网上传图片截图，[Jcrop][19]；
+    **体会：** *大道至简;来不及情况下，就得砍功能了；然后迭代。*
+##项目地址：
+  [微软123导航][20]
+  [2014世界杯模块][21]
+  [七夕表白季][22]
+  测试过:*ie11-6,chrome,360*;
+
+----------
+
+2013.04-2013.09:外包于中石油管道公司移动管理项目组，用开源软件开发：移动版门户，会议管理,公共组件开发；技术：[HTML5][23]+[CSS3][24]+JS(jquery)+[jquery moblie][25]+[PhoneGap][26]+[iScroll4][27]+[FunsionCharts][28],期间了解过[jQTouch][29],[Sencha Touch][30]
+
+
+----------
+
+
+ 2011.07-2013.03:外包于远洋地产SOA项目，用微软定制的工作流(Workflow)，开发了HR非正式入离职，转正，督办等等;
+ 技术：C#,SQL2008,ORM,WCF,Web Servers,js(jquery)+html+css；[MVVC][2](MVC)
+ 
+
+
+----------
+#我的个人项目：
+  业余时间，学习自己感兴趣的技术:
+  1.js前端(库)：[svg][31],canvas,[D3][32],[angularJs][33],[bootstrap][34],[winjs][35]
+  2.js后端：[node.js][36],微信公众平台([Node微信公共平台消息接口服务中间件][37],php)
+  3.[thinkPHP][38], [百度F.I.S前端工具框架][39]
+  Demo发布于自己的GITHUB：
+ 1. github主页：[nowgoant][40]
+ 2. JS游戏：[简单的外星人入侵Web Game][41]
+ 3. 在node.js下，用[Express][42],[Node微信公共平台消息接口服务中间件][43]做了个[微信demo][44]
+ 4. 转换js到[TypeScript][45] [2048 web game][46]
+
+
+----------
+#我的理想团队
+ 我想参加专注于前端技术，最好团队有活力，有大牛帮助。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  [1]: http://baike.baidu.com/view/6590.htm?fr=aladdin
+  [2]: http://baike.baidu.com/view/3507915.htm?fr=aladdin
+  [3]: https://github.com/SparkViewEngine
+  [4]: http://www.bootcss.com/p/lesscss/
+  [5]: http://www.typescriptlang.org/
+  [6]: http://fis.baidu.com/index.html
+  [7]: http://jquery.com/
+  [8]: https://github.com/angular#0-bdhome-1-6510-1d18d5141e8cb800a4977d54d80686cb
+  [9]: http://www.google.com/
+  [10]: http://jquery.com/
+  [11]: http://docs.kissyui.com/5.0/
+  [12]: http://alloyteam.github.io/JX/#home
+  [13]: http://www.qwrap.com/
+  [14]: https://github.com/kissygalleryteam/lazyload
+  [15]: http://www.appelsiini.net/projects/lazyload
+  [16]: https://github.com/thebird/Swipe
+  [17]: http://123.msn.com/biaobai
+  [18]: http://a2.qpic.cn/psb?/V14KQQNX4XwHMV/cDUbx8M2LBBLiMI07P9ATwYmhWUkEDzNP4pNBfbE.zQ!/b/dPzguePOAQAA&bo=9AEgAQAAAAAFB*A!&rf=viewer_4
+  [19]: https://github.com/tapmodo/Jcrop
+  [20]: http://123.msn.com/?pc=nowgoant
+  [21]: http://123.msn.com/worldcup
+  [22]: http://123.msn.com/biaobai
+  [23]: http://www.w3school.com.cn/html5/
+  [24]: http://www.w3school.com.cn/css3/
+  [25]: http://jquerymobile.com/
+  [26]: http://phonegap.com/
+  [27]: http://cubiq.org/iscroll-4
+  [28]: http://www.fusioncharts.com/
+  [29]: http://jqtjs.com/
+  [30]: http://www.sencha.com/
+  [31]: http://svgjs.com/
+  [32]: http://d3js.org/
+  [33]: https://github.com/angular#0-bdhome-1-6510-1d18d5141e8cb800a4977d54d80686cb
+  [34]: http://getbootstrap.com/
+  [35]: http://try.buildwinjs.com/#listview
+  [36]: http://nodejs.org/
+  [37]: https://github.com/node-webot/wechat
+  [38]: http://www.thinkphp.cn/
+  [39]: http://fis.baidu.com/index.html
+  [40]: https://github.com/nowgoant
+  [41]: http://alieninvasionts.herokuapp.com/
+  [42]: http://expressjs.com/
+  [43]: https://github.com/node-webot/wechat
+  [44]: http://ts2048.herokuapp.com/
+  [45]: http://www.typescriptlang.org/
+  [46]: http://ts2048.herokuapp.com/

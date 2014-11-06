@@ -236,6 +236,19 @@
             window.lightMode ? ceditor.wmd.scroll(onScroll) : ceditor.aceEditor.session.on("changeScrollTop", onScroll)
         })(ceditor, window._, jQuery);
 
+        (function (ceditor, _, $) {
+            $(document).ready(function () {
+                $.get('data/resume.html', {}, function (data) {
+                    data && ceditor.aceEditor.setValue(data);
+
+                    var timeout = setTimeout(function () {
+                        clearTimeout(timeout);
+                        window.lightMode || ceditor.aceEditor.session.setScrollTop(0);
+                        window.lightMode && ceditor.wmd.scrollTop(0);
+                    }, 10);
+                });
+            })
+        })(ceditor, window._, jQuery);
     </script>
 </body>
 </html>

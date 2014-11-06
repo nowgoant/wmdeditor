@@ -77,6 +77,7 @@
     <Content Include="content\javascripts\headsmart.min.js" />
     <Content Include="content\javascripts\main.js" />
     <Content Include="content\javascripts\modernizr.js" />
+    <Content Include="data\resume.html" />
     <Content Include="fis-conf-no-std.js" />
     <Content Include="fis-conf-timestamp.js" />
     <Content Include="fis-conf.js" />
