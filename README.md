@@ -1,23 +1,38 @@
-## 什么是 Markdown
+Pagedown-Ace+Ace自定义Markdown编辑器
+========
+#依赖
+1.[Ace.js][1]
 
-[Markdown][1] 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，**粗体** 或者 *斜体* 某些文字，更棒的是，它还可以
+2.[Pagedown][2]
 
-### 高亮一段代码[^code]
+3.[Pagedown-Ace][3]
 
-```python
-@requires_authorization
-class SomeClass:
-    pass
+4.[Pagedown-extra][4]
 
-if __name__ == '__main__':
-    # A comment
-    print 'hello world'
-```
-### 2. 编辑工具栏
+5.[Jquery][5]
 
-也许您还是一个 Markdown 语法的新手，在您完全熟悉它之前，我们在 **编辑区** 的顶部放置了一个如下图所示的工具栏，您可以使用鼠标在工具栏上调整格式，不过我们仍旧鼓励你使用键盘标记格式，提高书写的流畅度。
+6.[Jquery.easing][6]
 
-![tool-editor](https://www.zybuluo.com/static/img/toolbar-editor.png)
+7.[Underscore][7]
 
 
-  [1]: http://wowubuntu.com/markdown/basic.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+  [1]: https://github.com/ajaxorg/ace/
+  [2]: http://code.google.com/p/pagedown/
+  [3]: https://github.com/benweet/pagedown-ace
+  [4]: https://github.com/jmcmanus/pagedown-extra
+  [5]: http://jquery.com/
+  [6]: http://gsgd.co.uk/sandbox/jquery/easing/
+  [7]: http://underscorejs.org/
