@@ -20,6 +20,9 @@
     <Content Include="content\css\font-face.css">
       <DependentUpon>font-face.less</DependentUpon>
     </Content>
+    <Content Include="content\css\modal.css">
+      <DependentUpon>modal.less</DependentUpon>
+    </Content>
     <Content Include="content\css\wmd-bar.css">
       <DependentUpon>wmd-bar.less</DependentUpon>
     </Content>
@@ -39,6 +42,12 @@
     <Content Include="content\fonts\opensans-regular-webfont.eot" />
     <Content Include="content\fonts\opensans-regular-webfont.ttf" />
     <Content Include="content\fonts\opensans-regular-webfont.woff" />
+    <Content Include="content\css\modal.less" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <None Include="lib\jquery-2.1.1.intellisense.js" />
     <Content Include="content\css\wmd-editor.css">
       <DependentUpon>wmd-editor.less</DependentUpon>
@@ -81,6 +90,13 @@
     <Content Include="fis-conf-no-std.js" />
     <Content Include="fis-conf-timestamp.js" />
     <Content Include="fis-conf.js" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
+    <Content Include="lib\bootstrap\js\bootstrap.min.js" />
     <Content Include="lib\jquery-2.1.1.js" />
     <Content Include="lib\jquery-2.1.1.min.js" />
     <Content Include="content\css\core.css" />
