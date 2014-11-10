@@ -49,6 +49,7 @@
     <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="wmdeditor.appcache" />
+    <Content Include="content\fonts\fontawesome-webfont-318b4311a9df9bbf0746430594ca1205.woff" />
     <None Include="lib\jquery-2.1.1.intellisense.js" />
     <Content Include="content\css\wmd-editor.css">
       <DependentUpon>wmd-editor.less</DependentUpon>
