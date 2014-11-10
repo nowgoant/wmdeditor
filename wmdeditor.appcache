@@ -2,6 +2,13 @@
 
 # version 2014-11-10 16:15 v1.0.2
 CACHE:
+#font
+https://fonts.gstatic.com/s/architectsdaughter/v6/RXTgOOQ9AAtaVOHxx0IUBOkI_DLF4EgbZt3mhU8gQFo.woff
+
+#img
+content/images/github-button.png
+content/images/body-bg.jpg
+
 #css
 content/css/stylesheet.css
 lib/bootstrap/css/bootstrap.min.css
@@ -13,6 +20,8 @@ lib/Markdown.Editor.js
 lib/Markdown.Extra.js
 
 lib/ace/ace.js
+lib/ace/theme-tomorrow.js
+lib/ace/mode-markdown.js
 
 lib/underscore.js
 
