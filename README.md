@@ -15,7 +15,7 @@ Pagedown-Ace+Ace自定义Markdown编辑器
 
 7.[Underscore][7]
 
-8.[bootstrap][8]
+8.[Bootstrap][8]
 
 
 
