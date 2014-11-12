@@ -18,7 +18,7 @@ Pagedown-Ace+Ace自定义Markdown编辑器
 8.[Bootstrap][8]
 
 #特性
-1.加HTML5 [Application Cache][9],提高二次访问体验
+1.HTML5 [Application Cache][9],提高二次访问体验
 
 
 
