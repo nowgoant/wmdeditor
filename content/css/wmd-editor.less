@@ -33,6 +33,8 @@
 .preview-container {
     background-color: #fff;
     min-height: 400px;
+    max-width: 1000px;
+    margin: 0 auto;
     overflow-y: scroll;
     padding: 0 19px;
     border: 1px solid #c9d8db;
@@ -52,4 +54,13 @@
 
 .preview-area {
     position: relative;
+}
+
+.preview-area.show {
+    .preview-container {
+        height: auto !important;
+        overflow: hidden;
+        border: none;
+        padding: 0;
+    }
 }

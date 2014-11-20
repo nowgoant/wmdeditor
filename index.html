@@ -26,22 +26,19 @@
             </div>
 
         </div>
-        <div class="col-2 fl editor-area">
+        <div id="editor-area" class="col-2 fl editor-area">
             <div class="wmd-area">
                 <input id="text_content" name="content" type="hidden">
                 <div id="wmd-input" class="wmd-input ace-content">
                 </div>
             </div>
-
         </div>
-        <div class="col-2 fl preview-area" id="preview-area">
+        <div id="preview-area" class="col-2 fl preview-area">
             <div class="preview-container">
                 <div id="wmd-preview" class="bfc wmd-panel wmd-preview" style="height: auto; left: 0"></div>
             </div>
-            <div class="layout-toggler layout-toggler-editor btn btn-info open" title="Toggle preview">
-
+            <div class="layout-toggler layout-toggler-editor btn btn-info" title="Toggle preview">
                 <i class="icon-none"></i>
-
             </div>
         </div>
     </div>
@@ -348,6 +345,38 @@
                         window.lightMode || ceditor.aceEditor.session.setScrollTop(0);
                         window.lightMode && ceditor.wmd.scrollTop(0);
                     }, 10);
+                });
+
+                $(".layout-toggler-editor").click(function () {
+                    var target = $(this),
+                        ed_area = $("#editor-area"),
+                        per_area = $("#preview-area"),
+                        max = window.innerWidth / 2;
+
+                    if (target.hasClass("open")) {
+                        ed_area.stop("EditorAreaClose", true).animate({ value: 0 }, {
+                            easing: "easeOutSine", duration: 300, queue: "EditorAreaClose", step: function (t) {
+                                per_area.width(per_area.width() - (max - t));
+                                ed_area.width(max - t);
+                                //console.log(t);
+                            }, done: function () {
+                                target.removeClass("open");
+                                ed_area.removeAttr("style");
+                                per_area.removeClass("show").removeAttr("style");
+                            }
+                        }).dequeue("EditorAreaClose");
+                    } else {
+                        per_area.addClass("show");
+                        ed_area.stop("EditorAreaClose", true).animate({ value: max }, {
+                            easing: "easeOutSine", duration: 300, queue: "EditorAreaClose", step: function (t) {
+                                ed_area.width(max - t);
+                                per_area.width(max + t);
+                                //console.log(t);
+                            }, done: function () {
+                                target.addClass("open");
+                            }
+                        }).dequeue("EditorAreaClose");
+                    }
                 });
             })
         })(ceditor, window._, jQuery);
