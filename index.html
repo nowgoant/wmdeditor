@@ -1,39 +1,47 @@
 ﻿<!DOCTYPE html>
 <html manifest="wmdeditor.appcache">
+<!--<html>-->
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="content/css/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="content/css/wmd-editor.css" media="screen" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Wmdeditor by nowgoant</title>
+    <title>Wmdeditor编辑器Markdown</title>
 </head>
 
 <body>
-    <header>
-        <div class="inner">
-            <h1>WmdEditor</h1>
-            <h2>Pagedown-Ace+Ace自定义Markdown编辑器</h2>
-            <a href="https://github.com/nowgoant/wmdeditor" class="button" target="_blank"><small>View project on</small> GitHub</a>
-        </div>
-    </header>
     <div id="content-wrapper">
-        <div class="col-2 fl">
+        <div class="bar-area">
+            <div class="wmd-button-bar" id="wmd-button-bar">
+                <div class="right-area col-2">
+                    <h4>Pagedown-Ace+Ace自定义Markdown编辑器</h4>
+                    <a class="git-hub bfc" href="https://github.com/nowgoant/wmdeditor" target="_blank">
+                        <i class="icon-github"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-2 fl editor-area">
             <div class="wmd-area">
                 <input id="text_content" name="content" type="hidden">
-                <div class="wmd-button-bar" id="wmd-button-bar">
-                </div>
                 <div id="wmd-input" class="wmd-input ace-content">
                 </div>
             </div>
+
         </div>
-        <div class="col-2 fl" id="preview-area">
+        <div class="col-2 fl preview-area" id="preview-area">
             <div class="preview-container">
                 <div id="wmd-preview" class="bfc wmd-panel wmd-preview" style="height: auto; left: 0"></div>
+            </div>
+            <div class="layout-toggler layout-toggler-editor btn btn-info open" title="Toggle preview">
+
+                <i class="icon-none"></i>
+
             </div>
         </div>
     </div>
@@ -183,13 +191,22 @@
 
 
                     $("#wmd-button-row").append('<li class="wmd-button" id="wmd-preview-button"><i class="btn btn-eye"></i> \u9884\u89c8</li>');
-                    $("#wmd-preview-button").css({ position: "absolute", right: 30, width: 60 }).click(function () {
+                    $("#wmd-preview-button").css({ position: "absolute", right: 30, width: 45 }).click(function () {
 
                     });
                     //$("#wmd-preview-button").bind("click", REditor.toggle_preview),
                     $("#wmd-button-row").append('<li class="wmd-button" id="wmd-markdown-button"><i class="btn btn-question-circle"></i></li>'),
                     $("#wmd-markdown-button").css({ position: "absolute", right: 10, width: 20 }).click(function () {
                         //    $(".modal-markdown").modal()
+                        $.get('data/my-resume.html', {}, function (data) {
+                            data && ceditor.aceEditor.setValue(data);
+
+                            var timeout = setTimeout(function () {
+                                clearTimeout(timeout);
+                                window.lightMode || ceditor.aceEditor.session.setScrollTop(0);
+                                window.lightMode && ceditor.wmd.scrollTop(0);
+                            }, 10);
+                        });
                     });
                 },
                 resetModalInputs: function () {

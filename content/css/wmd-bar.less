@@ -59,12 +59,14 @@ ul, ol {
     padding: 8px 5px;
     border-bottom: 1px #eee solid;
     border: 1px solid #c9d8db;
+    position: relative;
 
     ul.wmd-button-row {
         margin: 0 0 0 5px;
         position: relative;
         height: 25px;
         padding: 0;
+        width: 50%;
     }
 }
 
@@ -147,10 +149,50 @@ ul, ol {
     content: "\f064";
 }
 
+.btn-eye {
+    padding: 6px 0;
+}
+
 .btn-eye:before {
     content: "\f06e";
 }
 
 .btn-question-circle:before {
     content: "\f059";
+}
+
+.bar-area {
+    position: relative;
+    height: 43px;
+
+    .right-area {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+
+        h4 {
+            text-indent: 10px;
+        }
+    }
+
+    .icon-github {
+        display: inline-block;
+        width: 30px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .icon-github:before {
+        content: "\f09b";
+    }
+
+
+    .git-hub {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        text-decoration: none;
+    }
 }

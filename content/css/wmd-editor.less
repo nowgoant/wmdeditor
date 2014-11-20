@@ -1,14 +1,23 @@
 ﻿@import 'wmd-bar.less';
 @import 'modal.less';
+@import 'bottom.less';
+
+.hide {
+    display: none;
+}
 
 .fl {
     float: left;
 }
 
-.wmd-area {
-    width: 100%;
-    min-width: 100%;
+.editor-area {
     position: relative;
+
+    .wmd-area {
+        width: 100%;
+        min-width: 100%;
+        position: relative;
+    }
 }
 
 .col-2 {
@@ -25,7 +34,6 @@
     background-color: #fff;
     min-height: 400px;
     overflow-y: scroll;
-    margin: 40px 0 0 0;
     padding: 0 19px;
     border: 1px solid #c9d8db;
     -webkit-border-radius: 4px;
@@ -41,3 +49,7 @@
     -ms-box-sizing: border-box;
 }
 
+
+.preview-area {
+    position: relative;
+}
