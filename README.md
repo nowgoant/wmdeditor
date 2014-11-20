@@ -17,9 +17,8 @@ Pagedown-Ace+Ace自定义Markdown编辑器
 
 8.[Bootstrap][8]
 
-
-
-
+#特性
+1.HTML5 [Application Cache][9],提高二次访问体验
 
 
 
@@ -39,3 +38,4 @@ Pagedown-Ace+Ace自定义Markdown编辑器
   [6]: http://gsgd.co.uk/sandbox/jquery/easing/
   [7]: http://underscorejs.org/
   [8]: http://www.bootcss.com/
+  [9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache
