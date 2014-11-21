@@ -286,6 +286,9 @@ body {
 .preview-area .wmd-preview li {
   margin-bottom: 0.2em;
 }
+.preview-area.show {
+  width: 100% !important;
+}
 .preview-area.show .preview-container {
   height: auto !important;
   overflow: hidden;
