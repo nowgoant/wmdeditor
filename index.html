@@ -218,7 +218,7 @@
                     clearTimeout(timeout);
                     window.lightMode || ceditor.aceEditor.session.setScrollTop(0);
                     window.lightMode && ceditor.wmd.scrollTop(0);
-                }, 10);
+                }, 100);
 
                 callback && callback();
             });
@@ -382,11 +382,11 @@
                     }
                 });
 
-                var formcode = getUrlParam('formcode');
+                var formcode = getUrlParam('formcode'), readOnly = getUrlParam('readonly');
                 if (formcode == "nowgoant") {
                     loadResouceData('data/my-resume.html', function () {
-                        $(".layout-toggler-editor").click();
-                    });                   
+                        readOnly == "true" && $(".layout-toggler-editor").click();
+                    });
                 } else {
                     loadResouceData('data/resume.html');
                 }
