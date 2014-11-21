@@ -40,18 +40,6 @@ html {
     margin: 0;
     padding: 0;
 }*/
-body,
-button,
-input,
-select,
-textarea {
-  font: 400 1em/1.8 Avenir, Microsoft Yahei;
-}
-body {
-  font-size: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
-  line-height: 1.8;
-}
 .theme-light {
   background: #F1E6D5;
   color: #333333;
@@ -244,6 +232,9 @@ ol {
 .layout-toggler i:before {
   content: "\f104";
 }
+body {
+  font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+}
 .hide {
   display: none;
 }
@@ -288,6 +279,12 @@ ol {
 }
 .preview-area {
   position: relative;
+}
+.preview-area .wmd-preview ul {
+  list-style-type: square;
+}
+.preview-area .wmd-preview li {
+  margin-bottom: 0.2em;
 }
 .preview-area.show .preview-container {
   height: auto !important;

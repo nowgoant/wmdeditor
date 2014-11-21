@@ -2,6 +2,10 @@
 @import 'modal.less';
 @import 'bottom.less';
 
+body {
+    font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+}
+
 .hide {
     display: none;
 }
@@ -54,6 +58,16 @@
 
 .preview-area {
     position: relative;
+
+    .wmd-preview {
+        ul {
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 0.2em;
+        }
+    }
 }
 
 .preview-area.show {

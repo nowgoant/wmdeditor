@@ -40,18 +40,6 @@ html {
     margin: 0;
     padding: 0;
 }*/
-body,
-button,
-input,
-select,
-textarea {
-  font: 400 1em/1.8 Avenir, Microsoft Yahei;
-}
-body {
-  font-size: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
-  line-height: 1.8;
-}
 .theme-light {
   background: #F1E6D5;
   color: #333333;

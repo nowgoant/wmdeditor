@@ -195,15 +195,7 @@
                     $("#wmd-button-row").append('<li class="wmd-button" id="wmd-markdown-button"><i class="btn btn-question-circle"></i></li>'),
                     $("#wmd-markdown-button").css({ position: "absolute", right: 10, width: 20 }).click(function () {
                         //    $(".modal-markdown").modal()
-                        $.get('data/my-resume.html', {}, function (data) {
-                            data && ceditor.aceEditor.setValue(data);
-
-                            var timeout = setTimeout(function () {
-                                clearTimeout(timeout);
-                                window.lightMode || ceditor.aceEditor.session.setScrollTop(0);
-                                window.lightMode && ceditor.wmd.scrollTop(0);
-                            }, 10);
-                        });
+                        loadResouceData('data/my-resume.html');
                     });
                 },
                 resetModalInputs: function () {
@@ -217,6 +209,20 @@
         })(Markdown, ace);
 
         var ceditor = new CEditorBuiler({});
+
+        function loadResouceData(url, callback) {
+            $.get(url, {}, function (data) {
+                data && ceditor.aceEditor.setValue(data);
+
+                var timeout = setTimeout(function () {
+                    clearTimeout(timeout);
+                    window.lightMode || ceditor.aceEditor.session.setScrollTop(0);
+                    window.lightMode && ceditor.wmd.scrollTop(0);
+                }, 10);
+
+                callback && callback();
+            });
+        }
 
         (function (ceditor, _, $) {
             function resize() {
@@ -336,17 +342,14 @@
         })(ceditor, window._, jQuery);
 
         (function (ceditor, _, $) {
+            function getUrlParam(key) {
+                var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)"),
+                 matchs = window.location.search.substr(1).match(reg);
+
+                return matchs && decodeURIComponent(matchs[2])
+            }
+
             $(document).ready(function () {
-                $.get('data/resume.html', {}, function (data) {
-                    data && ceditor.aceEditor.setValue(data);
-
-                    var timeout = setTimeout(function () {
-                        clearTimeout(timeout);
-                        window.lightMode || ceditor.aceEditor.session.setScrollTop(0);
-                        window.lightMode && ceditor.wmd.scrollTop(0);
-                    }, 10);
-                });
-
                 $(".layout-toggler-editor").click(function () {
                     var target = $(this),
                         ed_area = $("#editor-area"),
@@ -378,6 +381,15 @@
                         }).dequeue("EditorAreaClose");
                     }
                 });
+
+                var formcode = getUrlParam('formcode');
+                if (formcode == "nowgoant") {
+                    loadResouceData('data/my-resume.html', function () {
+                        $(".layout-toggler-editor").click();
+                    });                   
+                } else {
+                    loadResouceData('data/resume.html');
+                }
             })
         })(ceditor, window._, jQuery);
     </script>
